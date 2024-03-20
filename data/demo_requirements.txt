@@ -1,0 +1,11 @@
+# Demo manifest for the SCA module. Deliberately pins old versions of
+# PyYAML/Flask/click (each with a real, documented vulnerability - see
+# data/osv_fixture.json) alongside a clean, current certifi pin, so the
+# demo output shows both vulnerable and clean dependencies.
+#
+# This file is scanned, never installed - it is not this project's
+# actual requirements.txt (see the repo root for that).
+pyyaml==5.3
+flask==0.12
+click==8.1.7
+certifi==2024.7.4
