@@ -1,0 +1,48 @@
+{
+  "_comment": "Real data, not fabricated: this is a frozen copy of an actual OSV.dev API response (https://api.osv.dev/v1/querybatch + /v1/vulns/{id}) captured live on 2026-08-22 for the exact packages/versions in data/demo_requirements.txt. Used as the offline/demo fixture so CI doesn't depend on network access, and so results are reproducible - not because the vulnerabilities themselves are made up. Severity labels for entries without an explicit OSV database_specific.severity are our own conservative classification (documented in osv_client.py's fallback logic), not an official score.",
+  "results": {
+    "pyyaml==5.3": {
+      "ecosystem": "PyPI",
+      "vulnerabilities": [
+        {
+          "vuln_id": "GHSA-6757-jp84-gxfx",
+          "summary": "Improper Input Validation in PyYAML",
+          "severity": "critical",
+          "aliases": ["CVE-2020-1747", "PYSEC-2020-96"]
+        },
+        {
+          "vuln_id": "GHSA-8q59-q68h-6hv4",
+          "summary": "Improper Input Validation in PyYAML",
+          "severity": "critical",
+          "aliases": ["CVE-2020-14343", "PYSEC-2021-142"]
+        }
+      ]
+    },
+    "flask==0.12": {
+      "ecosystem": "PyPI",
+      "vulnerabilities": [
+        {
+          "vuln_id": "GHSA-562c-5r94-xh97",
+          "summary": "Flask is vulnerable to Denial of Service via incorrect encoding of JSON data",
+          "severity": "high",
+          "aliases": []
+        }
+      ]
+    },
+    "click==8.1.7": {
+      "ecosystem": "PyPI",
+      "vulnerabilities": [
+        {
+          "vuln_id": "PYSEC-2026-2132",
+          "summary": "Command injection vulnerability in click.edit()",
+          "severity": "high",
+          "aliases": ["CVE-2026-7246", "GHSA-47fr-3ffg-hgmw"]
+        }
+      ]
+    },
+    "certifi==2024.7.4": {
+      "ecosystem": "PyPI",
+      "vulnerabilities": []
+    }
+  }
+}

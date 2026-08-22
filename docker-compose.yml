@@ -1,0 +1,9 @@
+services:
+  pipeline:
+    build: .
+    volumes:
+      - ./output:/app/output
+    # --report-only so the container exits 0 for a friendly first run even though the
+    # bundled target is deliberately vulnerable. Drop --report-only to see the real gate
+    # behavior (exit 1) - or: command: ["--demo", "--fail-on", "critical"]
+    command: ["--demo", "--report-only", "--output-dir", "/app/output"]
